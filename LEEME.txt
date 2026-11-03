@@ -1,0 +1,31 @@
+1. Instala Python 3.11 o 3.12 desde python.org (Add Python to PATH).
+2. Instala FFmpeg desde ffmpeg.org y añade la carpeta bin al PATH. Verifica: ffmpeg -version
+3. Ve a https://discord.com/developers/applications y crea New Application.
+4. En Bot, copia/reset el token. No lo compartas nunca.
+5. Activa Bot > Privileged Gateway Intents > MESSAGE CONTENT INTENT.
+6. En OAuth2 > URL Generator, marca bot y applications.commands; permisos View Channels, Send Messages, Connect y Speak. Abre el enlace para invitarlo.
+7. Ejecuta INSTALAR.bat. Abre .env con Bloc de notas y sustituye PEGA_AQUI_TU_TOKEN por tu token.
+8. Ejecuta INICIAR.bat. Mantén abierta esa ventana y tu PC encendido.
+9. Entra en voz y usa /join, /tts texto: Hola, /voz, /idioma pais: MX, /velocidad, /pitch.
+10. /auto activar: True canal: #general (requiere Gestionar servidor). /auto activar: False para detener.
+11. /paises lista variantes. /voz autocompleta todas las voces disponibles al escribir.
+12. /leave desconecta. Las voces y preferencias se guardan en config.json.
+
+NOTAS: El bot no está alojado; debe permanecer en ejecución. Edge TTS necesita Internet y depende de un servicio externo, que puede cambiar o limitar el acceso. Solo se leen mensajes de miembros que estén en el mismo canal de voz. Máximo 500 caracteres por mensaje y 40 pendientes por servidor. No publiques tu .env ni config.json.
+
+LECTURA AUTOMATICA DEL CHAT DE VOZ (NUEVO)
+-------------------------------------
+1. Entra en un canal de voz y usa /join una sola vez para que entre el bot.
+2. Desde ese momento, cualquier mensaje normal escrito en el CHAT INTEGRADO
+   DE ESE CANAL DE VOZ se lee automaticamente, sin /tts ni otros comandos.
+3. Solo se leen mensajes de usuarios presentes en el mismo canal de voz.
+4. Cada usuario puede configurar su propia voz con /voz, /idioma,
+   /velocidad y /pitch.
+5. /auto activar:false desactiva la lectura; /auto activar:true la reactiva.
+   Con /auto activar:true canal:<canal> puedes elegir otro canal.
+6. Si el bot sale y vuelve a entrar mediante /join, se vuelve a activar
+   la lectura del chat de voz del canal actual.
+
+IMPORTANTE: en Discord Developer Portal > Bot, activa MESSAGE CONTENT INTENT.
+El bot debe poder ver el canal y leer sus mensajes. Manten INICIAR.bat
+abierto mientras quieras que funcione.
